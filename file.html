@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 420px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      position: relative;
+      height: 80px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      position: absolute;
+    }
+
+    #yes {
+      background: #ffccd5;
+      color: #b3003b;
+      left: 60px;
+    }
+
+    #no {
+      background: #590d22;
+      color: white;
+      right: 60px;
+    }
+
+    #message,
+    #noMessage {
+      margin-top: 25px;
+      font-size: 20px;
+      display: none;
+    }
+
+    .figurine {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Happy Valentine Babe 💘</h1>
+  <p>Do you love me? 😌</p>
+
+  <div class="buttons">
+    <button id="yes">Oui ❤️</button>
+    <button id="no">Non 💔</button>
+  </div>
+
+  <!-- Message when YES -->
+  <div id="message"> hbib dyali omry u qalbi hyati u rohi ❤️<br><br> lyum nhar jdid f hyatna bzuj, ms had nhar m3ruff blhub u m3ruf bkol haja mziwna. hadchi elach staghelito bach nqolk qadach kanbghik u qadach kanhmaq elik ababe 🥺💖<br><br> walakin bghit t3raf anaho lhob dyali lik mamhtajchi nhar wla chi haja bach nqolk fih anaho kanbghik, hit bkhtissar hub dyali lik wela juz2 meni, mn nafssi، mn ayy haja fiya ❤️<br><br> gher amr wmafih anaho had nhar etani forssa fin n3abarlk 3la ayach hassa tijahek ababe 💌<br><br> bghit nqolk anaho mn nhar dkhulti lhyati u ntina katbdel fiya bzaf dlhajat، wlat hyati 3amra hub، 3amra dahk، 3amra b ayy haja mziwna 😍<br><br> mumkin tkun 3andk ayy bnt f had dnya، makrahtch nzed nqolk u nzed n3abarlk، walakin ababe baraka… hit chhal mahdart maghanqedch nwsseff lik hobi lik 💘<br><br> bghit t3raf u t2aked bli kanbghik lyum، gheda، u hta l akhir nhar f hyatiii ❤️‍🔥<br><br> wakha t3asseb eliya، wakha dor fiya، wakha ayy haja… rh kanbghik ababe 🥹❤️<br><br> love u omry 💞<br> love u qalbi 💓<br> love u rohi dyali 💖 </div>
+
+  <!-- Message when NO -->
+  <div id="noMessage">
+    <div class="figurine">😠👉❤️</div>
+    wach mahchemtich ababe ؟<br>
+    wah 2 ans dowznaha bzuj 😤<br>
+    u db dayer *Non* ؟<br><br>
+    wach ma3andekch elach thchem ؟ 😡<br><br>
+    **khrej mn hna u brek ela “Oui” hssen manweriik 😈❤️**
+  </div>
+
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  const yesBtn = document.getElementById("yes");
+  const message = document.getElementById("message");
+  const noMessage = document.getElementById("noMessage");
+
+  noBtn.addEventListener("click", () => {
+    noMessage.style.display = "block";
+    message.style.display = "none";
+  });
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  yesBtn.addEventListener("click", () => {
+    message.style.display = "block";
+    noMessage.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
